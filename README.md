@@ -1,5 +1,9 @@
 # PROBIS-HACKATHON-REPO
-This is a repo to have the code commits for python 
+This is a repository for flatten the curve hackathon for community help during COVID-19 crisis
+
+## URL for the web-app
+https://probis-hackathon.herokuapp.com/
+
 ## Commit guidelines
 - commit to development branch only
 - Do not merge master
