@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THE PERSON IN NEED PROJECT</title>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link rel="stylesheet" href="{{url_for('static', filename='index.css')}}">
+</head>
+
+<body class="grey lighten-4">
+   <nav class="nav-extended">
+        <div class="nav-wrapper">
+            <a href="/" class="brand-logo center">Team Probis</a>
+        </div>
+        <div class="nav-content">
+            <ul class="tabs tabs-transparent">
+              <li class="tab"><a href="#home">Home</a></li>
+              <li class="tab"><a class="active" href="#about-us">About US</a></li>
+              <li class="tab"><a href="#request">Request</a></li>
+              <li class="tab"><a href="#volunteer">Volunteer</a></li>
+            </ul>
+          </div>
+    </nav>
+    <br>
+    <div class="container main">
+        <h2 style="font-family: dinneuzeitgroteskltw01-_812426,sans-serif;">THE PEOPLE IN NEED PROJECT</h2>
+        <div class="card">
+            <div class="card-content">
+                <span class="center-align" style="font-size:16px; font-weight:bold; font-family:helvetica-w01-light,helvetica-w02-light,sans-serif; color:#000000;">COVID-19 is a challenging time for all of us, but especially for our vulnerable communities.</p>
+                <p class="center-align">We understand that if you are a person in need (elderly, chronic conditions, disabilities, unemployed, health workers), you may not have or should not be going out to get the essential supplies you need.</p></span>
+                <p class="center-align" style="line-height: 3.5; font-size: 20px;"><b>We can connect you with people nearby who will help you.</b></p>
+                    <b>Step 1: Submit a Request.</b>
+                </p>
+                <p>
+                <b>Step 2: Get matched with a volunteer.</b>
+                </p>
+                <p>
+                    <b>Step 3: Volunteer delivers essential supplies to your doorstep!</b>
+                </p>
+            </div>
+
+            <div class="row">
+                <div class="col s12 m6">
+                  <div class="card teal accent-4">
+                    <div class="card-content black-text">
+                      <span class="card-title"><p>I NEED</p><p>ESSENTIAL</p><p> SUPPLIES</p></span>
+                    </div>
+                        <div class="card-action  green darken-2">
+                        <a href="#elderly" style="font-size:x-large; color: white;"><b>REQUEST</strong></b></a></div>
+                    </div>
+                  </div>
+                    <div class="col s12 m6">
+                        <div class="card amber lighten-3">
+                            <div class="card-content black-text">
+                                <span class="card-title"><p>I CAN DONATE</p> <p>AND DELIVER</p> <p>ESSENTIAL SUPPLIES</p></span>
+                            </div>
+                            <div class="card-action amber darken-4">
+                            <a href="#elderly" style="font-size:x-large; color: white;"><b>VOLUNTEER</b></a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s12 m6">
+                        <div class="card blue-grey darken-1">
+                            <div class="card-content black-text">
+                            <span class="card-title"><p>I KNOW</p><p>SOMEONE WHO</p><p>ESSENTIAL SUPPLIES</p></span>
+                            </div>
+                            <div class="card-action">
+                            <a href="#elderly">REQUEST</a></div>
+                            </div>
+                        </div>
+                    
+                        <div class="col s12 m6">
+                            <div class="card blue-grey darken-1">
+                                <div class="card-content black-text">
+                                <span class="card-title"><p>I WOULD LIKE</p><p>TO REPORT A</p><p> CONCERN</p></span>
+                                </div>
+                                <div class="card-action">
+                                <a href="#elderly">REPORT</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="center-align">
+                <p><b>If you have extra supplies at home or are able to buy a little extra, please consider helping our vulnerable people who live nearby.</p></b>
+                <p style="font-size:large;"><b>Together we shall get through this.</b></p>
+            </div>
+            </div>
+            <!--<div class="card-tabs">
+                <ul class="tabs tabs-fixed-width">
+                    <li class="tab"><a href="#elderly">Request Items</a></li>
+                    <li class="tab"><a href="#suggest">Suggest Help</a></li>
+                    <li class="tab"><a href="#volunteers">Offer Help</a></li>
+                    <li class="tab"><a href="#report">Report Issue</a></li>
+                </ul>
+            </div>-->
+
+            <!---
+            <div class="card-content grey lighten-4">
+                <div id="elderly" class="center-align">
+                    <p>I NEED ESSENTIAL SUPPLIES</p>
+                    <br><br>
+                    <a href="/request-form" class="btn">REQUEST</a>
+                </div>
+                <div id="suggest" class="center-align">
+                    <p>I KNOW SOMEONE WHO NEEDS HELP</p>
+                    <br><br>
+                    <a href="/request-form" class="btn">REQUEST</a>
+                </div>
+                <div id="volunteers" class="center-align">
+                    <p>I CAN DONATE AND DELIVER ESSENTIAL SUPPLIES</p>
+                    <br><br>
+                    <a href="/volunteer" class="btn">VOLUNTEER</a>
+                </div>
+                <div id="report" class="center-align">
+                    <p>I WANT TO REPORT AN ISSUE</p>
+                    <br><br>
+                    <a href="/report" class="btn">REPORT</a>
+                </div>
+            </div>-->
+        </div>
+    </div> 
+
+    <footer class="page-footer">
+        <div class="footer-copyright">
+            <div class="container">
+                © 2020 Team Probis - ACS
+            </div>
+        </div>
+    </footer>
+    <script src="{{url_for('static', filename='index.js')}}"></script>
+</body>
+
+</html>

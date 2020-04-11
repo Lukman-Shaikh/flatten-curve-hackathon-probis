@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html leng="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Person In Need Project</title>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link rel="stylesheet" href="{{url_for('static', filename='index.css')}}">
+</head>
+
+<body class="grey lighten-4">
+    <nav>
+        <div class="nav-wrapper teal accent-4">
+            <a href="/" class="brand-logo center">The Person In Need Project</a>
+        </div>
+    </nav>
+
+    <div class="container main valign-wrapper">
+        <div class="row">
+            <div class="col s12">
+                <div class="card-panel center-align">
+                    <span>{{ message }}</span> {% if phone %}
+
+                    <hr>
+                    <span>Your person in need's phone number is: <b>{{ phone }}</b></span>
+                    <p>Due to our privacy policy, please do not disclose or use their contact details outside contacting them for delivery. </p>
+                    <br>
+                    <h6>Here are the easy steps to complete your request:</h6>
+                    <ol class="left-align">
+                        <li>Contact the person in need to clarify their needs, drop-off location and a good time to deliver the supplies.</li>
+                        <li>Deliver the required supplies to the agreed location. Where possible, minimise physical contact (if you’re delivering to their home, please leave the goods outside their front door).</li>
+                        <li>Once the delivery is finished press ‘Confirm’ in the email you received upon accepting the job.</li>
+                    </ol>
+                    <p>From The Person in Need Project</p>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="page-footer teal accent-4">
+        <div class="footer-copyright">
+            <div class="container">
+                @ 2020 Team Probis - ACS
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

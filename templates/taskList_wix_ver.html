@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Probis Platform</title>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link rel="stylesheet" href="{{url_for('static', filename='index.css')}}">
+</head>
+
+<body class="grey lighten-4">
+    <nav class="nav-extended">
+        <div class="nav-wrapper">
+            <a href="/" class="brand-logo center">Team Probis</a>
+        </div>
+        <div class="nav-content">
+            <div class="center-align">
+                <ul class="tabs tabs-transparent">
+                <li class="tab"><a href="#home">Home</a></li>
+                <li class="tab"><a class="active" href="#about-us">About US</a></li>
+                <li class="tab"><a href="#request">Request</a></li>
+                <li class="tab"><a href="#volunteer">Volunteer</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <br></br>
+    <div class="container main">
+        <h4 style="font-family: sans-serif; text-align: center;"><b>REQUEST FORM PEOPLE IN NEED</b></h4>
+        <div class="card">
+            <div class="card-content">
+                <span class="center-align"> <p style="font-size:16px; font-family:sans-serif;"><b>Thank you for being willing to volunteer your time and resources to help our vulnerable communities!</b></p>
+                    <br>
+                    <p class="center-align">Accept requests on this page depending on what supplies you have and how far you are willing to travel. We also highly encourage you to buy something extra for people in need every time you go shopping if you can!</p>
+                    <br>
+                    <p class="center-align">You will be directed to fill out a registration form if you accept a request so we can email you the person in need's contact details.​</p>
+                </span>
+                <p class="center-align" style="line-height: 3.5; font-size: 20px;"><strong>Together we shall get through this.</strong></p>
+                <div class="row">
+                    <form class="col s12">
+                      <div class="row">
+                            <div class="input-field col s6">
+                                <input id="icon_prefix" type="text" class="validate">
+                                <label for="icon_prefix">Enter Your Postcode Here*</label>
+                                <button class="btn waves-effect waves-light" type="submit" name="action" style="text-align: center; position:absolute; top:13%;">GO</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <hr></hr>
+                <button onclick="sortList()">Sort</button>
+                <hr></hr>
+        <div class="row">
+       <!-- {% for task in data.taskList %} -->
+        </div>
+        <div class="col s12 m6">
+            <div class="card green lighten-4">
+                <div class="card-content">
+                    <span class="card-title" data-id="{{ task.id }}">{{ task.postcode }} - {{ task.state-name }}</span>
+                    <p>Requires: <b>Groceries, Toilet Paper</b></p>
+                </div>
+                <div class="card-action green lighten-2" style="border-color: white;">
+                    <a class="black-text" href="/">ACCEPT</a>
+                </div>
+            </div>
+            <div class="card green lighten-4">
+                <div class="card-content">
+                    <span class="card-title" data-id="{{ task.id }}"><strong>VIC 2189 - Lilydale</strong></span>
+                    <p>Requires: <b>Groceries, Medication</b></p>
+                </div>
+                <div class="card-action green lighten-2" style="border-color: white;">
+                    <a class="black-text" href="/">ACCEPT</a>
+                </div>
+            </div>
+            <div class="card green lighten-4">
+                <div class="card-content">
+                    <span class="card-title" data-id="{{ task.id }}">VIC 1234 - Dandenong</span>
+                    <p>Requires: <b>Stationary, Toilet Paper</b></p>
+                </div>
+                <div class="card-action green lighten-2" style="border-color: white;">
+                    <a class="black-text" href="/" style="text-emphasis-color: white;">ACCEPT</a>
+                </div>
+            </div>
+        </div>
+        <br> <!--{% endfor %} -->
+    </div>
+
+    <footer class="page-footer">
+        <div class="footer-copyright">
+            <div class="container">
+                © 2020 Team Probis - ACS
+            </div>
+        </div>
+    </footer>
+    <script src="{{url_for('static', filename='index.js')}}"></script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, intital-scale=1.0">
+    <title>
+        Register as Volunteer
+    </title>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <link rel="stylesheet" href="{{url_for('static', filename='index.css')}}">
+</head>
+
+<body class="grey lighten-4">
+    <nav>
+        <div class="nav-wrapper teal accent-4">
+            <a href="/" class="brand-logo center">The Person in Need Project</a>
+        </div>
+    </nav>
+    <div class="container main">
+        <h3 class="center-align">Report an issue</h3>
+
+        <form class="col s12" method="POST">
+            <div class="col s12">
+                <div class="col s6">
+                    <div class="input-field">
+                        <input placeholder="Michael" id="first-name" name="first-name" type="text" class="validate">
+                        <label for="first-name">First Name</label>
+                    </div>
+                </div>
+                <div class="col s6">
+                    <div class="input-field">
+                        <input placeholder="Johnson" id="last-name" name="last-name" type="text" class="validate">
+                        <label for="last-name">Last Name</label>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12">
+                <div class="col s6">
+                    <div class="input-field">
+                        <input placeholder="0000 000 000" id="tel" name="tel" type="text" class="validate">
+                        <label for="tel">Phone Number</label>
+                    </div>
+                </div>
+                <div class="col s6">
+                    <div class="input-field">
+                        <input placeholder="xxxxxx@example.com" id="email" name="email" type="text" class="validate">
+                        <label for="email">Email Address</label>
+                    </div>
+                </div>
+            </div>
+            <div class="col s4">
+                <div class="input-field">
+                    <input id="report" name="report" type="text" class="validate">
+                    <label for="report">Report</label>
+                </div>
+            </div>
+
+            <div class="col s2 center-align">
+                <a href="/" id="cancel" class="btn red lighten-2">Cancel</a>
+                <button type="submit" id="submit" class="btn red lighten-2">Submit</button>
+            </div>
+        </form>
+        <br></br>
+    </div>
+    <footer class="page-footer teal accent-4">
+        <div class="footer-copyright">
+            <div class="container">
+                © 2020 Team Probis - ACS
+            </div>
+        </div>
+    </footer>
+    <script src="{{url_for('static', filename='index.js')}}"></script>
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Person in Need Project</title>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <link rel="stylesheet" href="{{url_for('static', filename='index.css')}}">
+</head>
+
+<body class="grey lighten-4">
+    <nav>
+        <div class="nav-wrapper teal accent-4">
+            <a href="/" class="brand-logo center">The Person in Need Project</a>
+        </div>
+    </nav>
+
+    <div class="container main">
+        <div class="row">
+            <span class="center-align"> <p style="font-size:16px; font-family:sans-serif;"><b>Thank you for being willing to volunteer your time and resources to help our vulnerable communities!</b></p>
+                <br>
+                <p class="center-align">Accept requests on this page depending on what supplies you have and how far you are willing to travel. We also highly encourage you to buy something extra for people in need every time you go shopping if you can!</p>
+                <br>
+                <p class="center-align">You will be directed to fill out a registration form if you accept a request so we can email you the person in need's contact details.​</p>
+            </span>
+            <p class="center-align" style="line-height: 3.5; font-size: 20px;"><strong>Together we shall get through this.</strong></p>
+        </div>
+        {% for task in data.taskList %}
+        <div class="col s12 m6">
+            <div class="card teal lighten-4">
+                <div class="card-content">
+                    <span class="card-title">{{ task.get("state") }} </span>
+                    <p>Postcode: {{ task.get("postcode") }}</p>
+                    <p>Items Needed: <b>{{ task.get("items") }}</b></p>
+                </div>
+
+                <div class="card-action">
+                    <a class="black-text" href="/status/{{ task.get('id') }}">ACCEPT</a>
+                </div>
+            </div>
+        </div>
+        <br> {% endfor %}
+    </div>
+
+    <footer class="page-footer teal accent-4">
+        <div class="footer-copyright">
+            <div class="container">
+                © 2020 Team Probis - ACS
+            </div>
+        </div>
+    </footer>
+    <script src="{{url_for('static', filename='index.js')}}"></script>
+</body>
+
+</html>

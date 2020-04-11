@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Person In Need Project</title>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link rel="stylesheet" href="{{url_for('static', filename='index.css')}}">
+</head>
+
+<body class="grey lighten-4">
+    <nav>
+        <div class="nav-wrapper teal accent-4">
+            <a href="/" class="brand-logo center">The Person In Need Project</a>
+        </div>
+    </nav>
+
+    <div class="container main">
+        <h3 class="center-align">Help Request Form</h3>
+
+        <form class="col s12" method="POST">
+            <div class="col s12">
+                <h6>Where do you live?</h6>
+                <p>
+                    <div class="row">
+                        <div class="col s6">
+                            <label>
+                              <input class="with-gap" name="state" id="vic" type="radio" checked value="VIC" />
+                              <span>VIC</span>
+                            </label>
+                        </div>
+                        <div class="col s6">
+                            <label>
+                              <input class="with-gap" name="state" id="tas" type="radio" value="TAS"/>
+                              <span>TAS</span>
+                            </label>
+                        </div>
+                    </div>
+                </p>
+                <p>
+                    <div class="row">
+                        <div class="col s6">
+                            <label>
+                              <input class="with-gap"  name="state" id="nsw" type="radio" value="NSW" />
+                              <span>NSW</span>
+                            </label>
+                        </div>
+                        <div class="col s6">
+                            <label>
+                              <input class="with-gap"  name="state" id="qld" type="radio" value="QLD" />
+                              <span>QLD</span>
+                            </label>
+                        </div>
+                    </div>
+                </p>
+                <p>
+                    <div class="row">
+                        <div class="col s6">
+                            <label>
+                              <input class="with-gap"  name="state" id="sa" type="radio" value="SA" />
+                              <span>SA</span>
+                            </label>
+                        </div>
+                        <div class="col s6">
+                            <label>
+                              <input class="with-gap"  name="state" id="wa" type="radio" value="WA" />
+                              <span>WA</span>
+                            </label>
+                        </div>
+                    </div>
+                </p>
+            </div>
+            <br><br>
+            <div class="row">
+                <div class="col s12">
+                    <div class="input-field">
+                        <input placeholder="3003" id="postcode" name="postcode" type="text" class="validate">
+                        <label for="postcode">Delivery Postcode</label>
+                    </div>
+                </div>
+                <div class="col s6">
+                    <div class="input-field">
+                        <input placeholder="0404040404" id="phone" name="phone" type="text" class="validate">
+                        <label for="phone">Phone Number</label>
+                    </div>
+                </div>
+                <div class="col s6">
+                    <div class="input-field">
+                        <input placeholder="Mike" id="name" name="name" type="text" class="validate">
+                        <label for="name">Full Name</label>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12">
+                <h6>Items you need?</h6>
+                <p>
+                    <div class="row">
+                        <div class="col s4">
+                            <label>
+                                  <input name="items" value="grocery" type="checkbox" checked/>
+                                  <span>Groceries</span>
+                            </label>
+                        </div>
+                        <div class="col s4">
+                            <label>
+                                <input name="items" value="stationery" type="checkbox" />
+                                <span>Stationery</span>
+                          </label>
+                        </div>
+                        <div class="col s4">
+                            <label>
+                                <input name="items" value="medicine" type="checkbox" />
+                                <span>Medicine</span>
+                          </label>
+                        </div>
+                    </div>
+                </p>
+            </div>
+
+            <br>
+            <div class="input-field col s12">
+                <input type="text" id="extra" name="description"></input>
+                <label for="extra">Extra Descriptions</label>
+            </div>
+
+            <br><br>
+
+
+            <div class="col s2 center-align">
+                <button type="submit" class="btn red lighten-2">Submit</button>
+                <!-- <a href="/request-success" id="submit-btn" class="btn red lighten-2">Submit</a> -->
+            </div>
+        </form>
+
+        <br><br>
+
+    </div>
+
+    <footer class="page-footer teal accent-4">
+        <div class="footer-copyright">
+            <div class="container">
+                © 2020 Team Probis - ACS
+            </div>
+        </div>
+    </footer>
+    <script src="{{url_for('static', filename='index.js')}}"></script>
+</body>
+ 
+</html>
