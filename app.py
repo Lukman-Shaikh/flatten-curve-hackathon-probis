@@ -34,6 +34,7 @@ def index():
 
 @app.route('/request-form', methods=['GET', 'POST'])
 def request_form():
+    temp_list = []
     if request.method == 'POST':
         name = request.form['name']
         phone = request.form['phone']
@@ -44,7 +45,13 @@ def request_form():
 
         req_payload = {'name': name, 'phone': phone, 'postcode': postcode, 'description': description, 'state': state,
                    'items': items}
-        req_coll.insert_one(req_payload)
+
+        for key in req_payload.keys():
+            temp_list.append(req_payload[key])
+        if '' in temp_list:
+            pass
+        else:
+            req_coll.insert_one(req_payload)
         return render_template('congrats.html')
     return render_template('request.html')
 
